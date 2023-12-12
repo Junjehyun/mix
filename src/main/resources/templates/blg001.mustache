@@ -1,1 +1,25 @@
 <!--blg001: 로그인화면-->
+
+{{>layouts/header}}
+
+<h2 class="lb_login">로그인 합시다!</h2>
+
+<form id="login_form" action="/b001" method="get">
+
+    <label for="username">계정</label>
+    <input type="text" id="username" name="username" maxlength="30">
+
+    <label for="password">비밀번호</label>
+    <input type="password" id="password" name="password" maxlength="20">
+
+    <input type="submit" id="btn_login" value="ログイン">
+
+    <div class="additional-links">
+        <a href="#" id="lnk_new_create">신규등록</a>
+        <a href="#" id="lnk_find_username">아이디를 잃어버린 경우</a>
+        <a href="#" id="lnk_find_password">비밀번호를 잃어버린 경우</a>
+    </div>
+
+</form>
+
+{{>layouts/footer}}

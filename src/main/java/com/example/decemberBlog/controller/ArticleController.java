@@ -13,6 +13,7 @@ public class ArticleController {
         return "articles/new";
     }
 
+    // submit버튼을 눌렀을때
     @PostMapping("/articles/create")
     public String createArticle(ArticleForm form) {
         System.out.println(form.toString());
