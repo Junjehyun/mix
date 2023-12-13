@@ -1,4 +1,7 @@
 package com.example.decemberBlog.dto;
+
+import com.example.decemberBlog.entity.Article;
+
 // 이 파일이 폼 데이터를 받아 올 그릇, DTO가 된다.
 public class ArticleForm {
     private String title; // 제목을 받을 필드
@@ -17,5 +20,9 @@ public class ArticleForm {
                 "title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 '}';
+    }
+
+    public Article toEntity() {
+        return new Article(null, title, content);
     }
 }

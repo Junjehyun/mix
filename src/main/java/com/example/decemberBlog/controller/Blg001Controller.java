@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class Blg001Controller {
 
-    @GetMapping("/main")
-    public String loginGamen() {
+    @GetMapping("/")
+    public String HelloWorld() {
         return "/blg001";
     }
 }
