@@ -25,9 +25,11 @@ public class ArticleController {
         System.out.println(form.toString());
         // 1. DTO를 엔티티로 변환
         Article article = form.toEntity();
+        // 1. DTO가 엔티티로 잘 변환 됐는지 확인 출력
         System.out.println(article.toString());
         // 2. 레파지토리로 엔티티를 DB에 저장
         Article saved = articleRepository.save(article);
+        // 2. article이 DB에 잘 저장되는지 확인 출력
         System.out.println(saved.toString());
         return "";
     }
