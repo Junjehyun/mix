@@ -23,10 +23,13 @@ public class Blg001Controller {
     // 로그인 버튼 눌렀을때
     @GetMapping("/b001")
     public String b001(Blg001Form form) {
+
         System.out.println(form.toString());
+
         // 1. DTO를 엔티티로 변환
         Blg001 blg001 = form.toEntity();
         System.out.println(blg001.toString());
+
         // 2. 레파지토리로 엔티티를 DB에 저장
         Blg001 saved = blg001Repository.save(blg001);
         System.out.println(saved.toString());

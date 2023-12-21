@@ -8,7 +8,7 @@ public class Blg001Form {
     private String password; // 비밀번호를 받을 필드
 
     
-    // 전송받은 제목과 내용을 필드에 저장하는 생성자 추가
+    // 전송받은 ID와 비밀번호를 필드에 저장하는 생성자 추가
     public Blg001Form(String username, String password) {
         this.username = username;
         this.password = password;
