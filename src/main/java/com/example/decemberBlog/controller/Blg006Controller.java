@@ -3,11 +3,13 @@ package com.example.decemberBlog.controller;
 import com.example.decemberBlog.dto.Blg006Form;
 import com.example.decemberBlog.entity.Blg006;
 import com.example.decemberBlog.repository.Blg006Repository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+@Slf4j
 @Controller
 public class Blg006Controller {
 
@@ -25,10 +27,12 @@ public class Blg006Controller {
 
         // 1. DTO를 엔티티로 변환
         Blg006 blg006 = form.toEntity();
-        System.out.println(blg006.toString());
+        log.info(form.toString());
+        //System.out.println(blg006.toString());
         // 2. 레파지토리로 엔티티를 DB에 저장
         Blg006 saved = blg006Repository.save(blg006);
-        System.out.println(saved.toString());
+        log.info(saved.toString());
+        //System.out.println(saved.toString());
         return "";
     }
 
